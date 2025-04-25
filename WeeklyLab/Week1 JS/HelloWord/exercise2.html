@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is 1st JS exercise</title>
+</head>
+<body>
+    <h1>A simple js inline embbed to a web document </h1>
+    <p id="text1" onclick="makeTextChange()">This is the content of the page </p>
+    <script>
+        var el = document.getElementById("text1");
+        el.innerHTML = "This has been changed";
+</script>
+<script>
+    function makeTextChange() {
+        document.getElementById("text1").innerHTML = "Text changed after clicking";
+    }
+</script>
+</body>
+</html>

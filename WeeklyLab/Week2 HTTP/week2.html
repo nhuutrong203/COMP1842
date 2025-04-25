@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Script Fix Example</title>
+    <style>
+        /* CSS styles */
+        #my_id {
+            background-color: skyblue;
+        }
+        div.row * {
+            background-color: yellow;
+        }
+        div p {
+            color: red;
+        }
+        div.my_style > p {
+            color: white;
+            background-color: purple;
+        }
+        div.adjacent_sibling + p {
+            color: green;
+            background-color: darkgoldenrod;
+        }
+    </style>
+</head>
+<body>
+    <div id="my_id">This is a div element with an id</div>
+    <div>This is a normal div element without an id</div>
+    <div class="row">
+        <p>Paragraph 1 in the div</p>
+        <p>Paragraph 2 in the div</p>
+        <section>Section 3 in the div</section>
+    </div>
+    <div class="my_style">
+        <p>This is a direct child paragraph</p>
+        <p>This is a direct child paragraph</p>
+        <section><p>This is not a direct child paragraph</p></section>
+    </div>
+
+    <div class="adjacent_sibling">
+        <p>Paragraph 1 in the div</p>
+        <p>Paragraph 2 in the div</p>
+    </div>
+    <p>Paragraph 3 an immediate sibling of the div</p>
+    <p>Paragraph 4 a sibling of a div, but not immediate</p>
+    <p id="my_greeting">Hello</p>
+    <p id="my_loop">Hello</p>
+    <p id="my_while">Hello</p>
+
+
+    <script>
+        var time = 15;
+        var greeting;
+        if (time < 10) {
+            greeting = "Good morning";
+        } else if (time < 20) {
+            greeting = "Good day";
+        } else {
+            greeting = "Good evening";
+        }
+
+        document.getElementById("my_greeting").innerHTML = greeting;
+
+        let text=" ";
+
+        for(let i = 0; i<5; i++) {
+            text += "The number is " + i + "<br>";
+        }
+        document.getElementById("my_loop").innerHTML = text;
+
+        text = "";
+        let i = 0;
+        while (i < 10) {
+            text += "The number is " + i + "<br>";
+            i++;
+        }
+        document.getElementById("my_while").innerHTML = text;
+    </script>
+</body>
+</html>

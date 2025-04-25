@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>This is the 1st JS exercise</title>
+</head>
+<body>
+    <h1>A simple javascript inline embedded to a web document</h1>
+    <p id="text1" onclick="makeTextChange()">This is the content of the page</p>
+    <script>
+        var el = document.getElementById("text1");
+        el.innerHTML = "The content is changed by javascript";
+    </script>
+    <script>
+        function makeTextChange() {
+            document.getElementById("text1").innerHTML = "Changed";
+        }
+    </script>
+</body>
+</html>

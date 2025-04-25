@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nguyen Huu Trong's Shop</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="nav-bar"></div>
+  <div id="app">
+    <header>
+      <h1>Nguyen Huu Trong's Shopping Cart</h1>
+      <div class="cart">
+        <p>Cart({{ cart.length }})</p>
+      </div>
+    </header>
+
+    <product 
+      :premium="premium" 
+      :link="link" 
+      @add-to-cart="updateCart" 
+      @remove-from-cart="removeFromCart">
+    </product>
+  </div>
+
+  <!-- Vue.js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+  <!-- Main JS -->
+  <script src="main.js"></script>
+</body>
+</html>
